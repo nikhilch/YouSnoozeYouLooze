@@ -1,5 +1,5 @@
 #display {
-    background: linear-gradient#4B0082,blue);
+    background: linear-gradient(#4B0082,blue);
     height: 520px;
     width: 426px;
     display: table-cell;

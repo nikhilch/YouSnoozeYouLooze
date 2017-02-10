@@ -152,3 +152,7 @@
    height: 70px;
 }
 
+.topRightButton:hover {
+  background: black;
+  text-decoration: none;
+}

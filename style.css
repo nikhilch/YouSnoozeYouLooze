@@ -1,7 +1,7 @@
 #display {
     background: linear-gradient(#000c33,#00061a);
     height: 520px;
-    width: 426px;
+    width: 390px;
     display: table-cell;
     vertical-align: bottom;
 }
@@ -121,10 +121,10 @@
   border-radius: 0px;
   font-family: Arial;
   color: #994903;
-  font-size: 20px;
+  font-size: 25px;
   padding: 11px 20px 10px 20px;
   text-decoration: none;
-  width: 50%;
+  width: 49%;
    height: 70px;
 }
 
@@ -145,7 +145,7 @@
   border-radius: 0px;
   font-family: Arial;
   color: white;
-  font-size: 20px;
+  font-size: 25px;
   padding: 11px 20px 10px 20px;
   text-decoration: none;
   width: 49%;

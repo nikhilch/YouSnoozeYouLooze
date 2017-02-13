@@ -5,19 +5,28 @@
 <meta charset="UTF-8">
 </head>
 
-<body>
+<body onload="init()">
 <h1>You Snooze You Looze</h1>
 <div id="display">
 
 
 <!-- View for "Time" page -->
 <div id="timeView" class="ysylView">
-<div id="timeText" class="viewText">TIME</div>
+<div id="timeText" class="viewText"></div>
+<div id="alarmStatus"></div>
+<button id="clearAlarm" type="button" onclick="clearAlarm()">Clear Alarm</button>
 </div>
 
 <!-- View for "Alarms" page -->
 <div id="alarmsView" class="ysylView">
-<div id="alarmText" class="viewText">ALARMS</div>
+    <!-- Hours and minutes drop downs are populated in script.js -->
+    <select id="alarmHourDropDown" class="alarmTimeSettings"></select>
+    <select id="alarmMinuteDropDown" class="alarmTimeSettings"></select>
+    <select id="alarmAMPMDropDown" class="alarmTimeSettings">
+        <option value="AM">AM</option>
+        <option value="PM">PM</option>
+    </select>
+    <button id="setAlarm" type="button" onclick="setAlarm()">Set Alarm</button>
 </div>
 
 <!-- View for "Stats" page -->

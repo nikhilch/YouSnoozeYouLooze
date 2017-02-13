@@ -83,3 +83,7 @@
 .buttonRow{
     margin-left: 10px;
 }
+
+#alarmStatus{
+    color: white;
+}

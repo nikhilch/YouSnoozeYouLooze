@@ -31,3 +31,8 @@
 }, 500);
 
    
+
+function ringAlarm()
+{
+    alert("The alarm rang WOOOOOOO");
+};

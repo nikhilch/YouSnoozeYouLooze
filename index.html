@@ -9,11 +9,11 @@
 <body>
 <h1>You Snooze You Looze</h1>
 <div id="display">
-  
+
 <div class= "topRow">
-  <button id="digital" class = "topButton" type="button"> Digital </button>                                                   
-  <button id="Analog" class = "topRightButton" type="button"> Analog </button> 
-</div> 
+  <button id="digital" class = "topButton" type="button"> Digital </button>
+  <button id="Analog" class = "topRightButton" type="button"> Analog </button>
+</div>
   <div class="boxed">
 <div id="alarmTime">7:30 PM</div>
   </div>
@@ -21,12 +21,16 @@
 <div class="buttonRow">
 <button id="button1" class="navButton" type="button">Time<img src="clock.png"></button>
 <button id="button2" class="navButton" type="button"> <a href="alarmpage.html">Alarm</a><img src="alarm.png"></button>
-<button id = "data" class = "navButton" type = "button">Statistics<img src="stats.png"></button>
+<button id = "data" class ="navButton" type ="button">Statistics<img src="stats.png"></button>
 </div> <!-- buttonRow -->
 
 </div> <!-- display -->
+
+<br>
+<button id="ringAlarmButton" type="button" onclick="ringAlarm()">Set off alarm</button>
+
+<p>Task 1: User should be able to set an alarm to any time of the day. When the alarm rings, the user should have the option of “Snoozing” the alarm or shutting it off completely (Simulate an alarm ringing by using the "Set off alarm" button above!).</p>
+
 <script src="script.js"></script>
 </body>
 </html>
-
-

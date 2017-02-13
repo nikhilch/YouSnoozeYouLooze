@@ -1,6 +1,5 @@
 <html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <title>You Snooze You Looze</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <meta charset="UTF-8">
@@ -10,18 +9,27 @@
 <h1>You Snooze You Looze</h1>
 <div id="display">
 
-<div class= "topRow">
-  <button id="digital" class = "topButton" type="button"> Digital </button>
-  <button id="Analog" class = "topRightButton" type="button"> Analog </button>
+
+<!-- View for "Time" page -->
+<div id="timeView" class="ysylView">
+<div id="timeText" class="viewText">TIME</div>
 </div>
-  <div class="boxed">
-<div id="alarmTime">7:30 PM</div>
-  </div>
+
+<!-- View for "Alarms" page -->
+<div id="alarmsView" class="ysylView">
+<div id="alarmText" class="viewText">ALARMS</div>
+</div>
+
+<!-- View for "Stats" page -->
+<div id="statsView" class="ysylView">
+<div id="statsText" class="viewText">STATS</div>
+</div>
+
 
 <div class="buttonRow">
-<button id="button1" class="navButton" type="button">Time<img src="clock.png"></button>
-<button id="button2" class="navButton" type="button"> <a href="alarmpage.html">Alarm</a><img src="alarm.png"></button>
-<button id = "data" class ="navButton" type ="button">Statistics<img src="stats.png"></button>
+<button id="buttonTime" class="navButton" type="button" onclick="onTimeClicked()">Time<img src="clock.png"></button>
+<button id="buttonAlarms" class="navButton" type="button" onclick="onAlarmsClicked()">Alarms<img src="alarm.png"></button>
+<button id="buttonStats" class ="navButton" type ="button" onclick="onStatsClicked()">Stats<img src="stats.png"></button>
 </div> <!-- buttonRow -->
 
 </div> <!-- display -->

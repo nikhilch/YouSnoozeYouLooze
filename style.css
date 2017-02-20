@@ -27,12 +27,12 @@
 }
 
 #statsText{
-	color: #d3d3d3;
+	color: #FBFBFB;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 30px;
-    margin-left: 100px;
-
-
+    font-size: 20px;
+	font-weight: bold;
+    margin-left: 140px;
+	margin-bottom: 8px;
 }
 
 .sleeping_g{
@@ -45,10 +45,6 @@
 	width: 300px;
 }
 
-#stats_buttons{
-	margin-left: 60px;
-	margin-bottom: 10px;
-}
 .navButton {
 	-moz-box-shadow:inset 0px 34px 0px -15px #ffffff;
 	-webkit-box-shadow:inset 0px 34px 0px -15px #ffffff;
@@ -225,4 +221,36 @@
 
 #alarmStatus{
     color: white;
+}
+
+.statsBar{
+	background-color:#2C2D29;
+	border:0px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color: whitesmoke;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:17px;
+	font-weight:400;
+    width: 23%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+
+}
+
+
+.statsBar:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
+	background:-moz-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:-webkit-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:-o-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:-ms-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed',GradientType=0);
+	background-color:#EBB340;
+	background: #EBB340;
+}
+
+.statrow{
+    margin-left: 30px;
 }

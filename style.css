@@ -37,26 +37,17 @@
 
 
 
-.sleeping_g_day{
+.sleeping_g{
 	margin-right: 50px;
-	margin-bottom: 0px;
+	margin-bottom: 100px;
 
 }
-#sleeping_graph_day{
+#sleeping_graph{
 	height: 200px;
 	width: 200px;
 }
 
 
-.sleeping_g_week{
-	margin-right: 50px;
-	margin-bottom: 0px;
-
-}
-#sleeping_graph_week{
-	height: 200px;
-	width: 200px;
-}
 
 
 .navButton {

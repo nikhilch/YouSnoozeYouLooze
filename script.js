@@ -4,10 +4,13 @@ var statsView = document.getElementById("statsView");
 var dayView = document.getElementById("dayView");
 var weekView = document.getElementById("weekView");
 var alarmTime = "";
+var wakeUpTime = document.getElementById("wakeUpTime");
 var alarmMinuteDropDown = document.getElementById("alarmMinuteDropDown");
 var alarmHourDropDown = document.getElementById("alarmHourDropDown");
+var alarmAMPMDropDown = document.getElementById("alarmAMPMDropDown");
 var snoozeNumberDropDown = document.getElementById("snoozeNumberDropDown");
 var snoozeLengthDropDown = document.getElementById("snoozeLengthDropDown");
+var clearAlarmButton = document.getElementById("clearAlarm");
 var alarmStopped = false;
 
 function onTimeClicked()
@@ -23,14 +26,15 @@ function onTimeClicked()
     timeText.innerHTML = currDate.getHours() + ":" + ((currDate.getMinutes() < 10)?"0":"") + currDate.getMinutes();
     
     var alarmStatus = document.getElementById("alarmStatus");
-    
     if (alarmTime == "")
     {
         alarmStatus.innerHTML = "Alarm is not currently set";
+        clearAlarmButton.style.display = "none";
     }
     else
     {
-        alarmStatus.innerHTML = "Alarm will ring at " + alarmTime;
+        alarmStatus.innerHTML = "Alarm will ring at " + alarmTime + '<br>' + wakeUpTime.innerHTML;
+        clearAlarmButton.style.display = "inherit";
     }
 
 };
@@ -87,6 +91,11 @@ function setAlarm()
 function clearAlarm()
 {
     alarmTime = "";
+    alarmHourDropDown.value =7;
+    alarmMinuteDropDown.value = "00";
+    snoozeNumberDropDown.value = 2;
+    snoozeLengthDropDown.value = "05";
+    updateWakeUpTime();
     onTimeClicked();
 }
 
@@ -94,6 +103,42 @@ function ringAlarm()
 {
     alarmStopped = confirm("Press \"OK\" to shut off alarm, or \"Cancel\" to snooze.");
 };
+
+function updateWakeUpTime()
+{
+    // Start with current alarm time 
+    var wakeHour = parseInt(alarmHourDropDown.value);
+    var wakeMinute =  parseInt(alarmMinuteDropDown.value);
+    var ampm = alarmAMPMDropDown.value;
+
+    // Find total number of minutes until wake up
+    snoozeNumber = parseInt(snoozeNumberDropDown.value);
+    snoozeLength = parseInt(snoozeLengthDropDown.value);
+    var snoozeTime = snoozeNumber * snoozeLength;
+
+
+    // Calculate wake up time
+    wakeMinute += snoozeTime;
+
+    while (wakeMinute >= 60)
+    {
+        wakeMinute -= 60;
+        wakeHour += 1;
+    }
+
+    while (wakeHour > 12)
+    {
+        wakeHour -= 12;
+        if (ampm == "AM")
+            ampm = "PM";
+        else
+            ampm = "AM";
+    }
+
+
+
+    wakeUpTime.innerHTML = "Wake up at " + wakeHour + ":" + ((wakeMinute < 10)?"0":"") + wakeMinute + " " + ampm + "!";
+}
 
 function init()
 {
@@ -126,5 +171,5 @@ function init()
         snoozeLengthDropDown.add(op);
     }
 
-    onTimeClicked();
+    clearAlarm();
 };

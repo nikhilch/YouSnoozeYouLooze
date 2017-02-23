@@ -33,23 +33,28 @@
 <div id="statsView" class="ysylView">
 <div id="statsText">STATS</div>
 <div class = "statrow">
-	<button id="day" class = "statsBar" type = "button"> Day</button>
-	<button id="week" class = "statsBar" type = "button"> Week</button>
+	<button id="day" class = "statsBar" type = "button" onclick = "onDayClicked()"> Day</button>
+	<button id="week" class = "statsBar" type = "button" onclick = "onWeekClicked()"> Week</button>
 	<button id ="month" class = "statsBar" type = "button"> Month</button>
 	<button id="year" class = "statsBar" type = "button"> Year</button>
 </div>
-<div class="sleeping_g" > <img src = "sleeping_graph.png" id = "sleeping_graph"></div>
-
 </div>
 
-
+<p>
+<div id = "dayView" class= "ysylView" >
+<div class="sleeping_g" > <img src = "day.png" id = "sleeping_graph"></div>
+</div>
+<div id = "weekView" class= "ysylView" >
+<div class="sleeping_g" > <img src = "sleeping_graph.png" id = "sleeping_graph"></div>
+</div>
+	</p>
 <div class="buttonRow">
 <button id="buttonTime" class="navButton" type="button" onclick="onTimeClicked()">Time<img src="clock.png"></button>
 <button id="buttonAlarms" class="navButton" type="button" onclick="onAlarmsClicked()">Alarms<img src="alarm.png"></button>
 <button id="buttonStats" class ="navButton" type ="button" onclick="onStatsClicked()">Stats<img src="stats.png"></button>
 </div> <!-- buttonRow -->
 
-</div> <!-- display -->
+	</div> <!-- display -->
 
 <br>
 <button id="ringAlarmButton" type="button" onclick="ringAlarm()">Set off alarm</button>

@@ -31,19 +31,24 @@
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 20px;
 	font-weight: bold;
-    margin-left: 140px;
-	margin-bottom: 8px;
+    margin-left: 50px;
+	margin-bottom: 10px;
 }
 
+
+
 .sleeping_g{
-	margin-left: 30px;
-	margin-bottom: 50px;
+	margin-right: 50px;
+	margin-bottom: 100px;
 
 }
 #sleeping_graph{
-	height: 300px;
-	width: 300px;
+	height: 200px;
+	width: 200px;
 }
+
+
+
 
 .navButton {
 /*
@@ -252,9 +257,8 @@ padding:9px 23px;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size:17px;
 	font-weight:400;
-    width: 23%;
     height: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     border-radius: 5px;
 
 }
@@ -272,5 +276,5 @@ padding:9px 23px;
 }
 
 .statrow{
-    margin-left: 30px;
+    margin-left: 20px;
 }

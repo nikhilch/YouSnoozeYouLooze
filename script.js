@@ -1,6 +1,8 @@
 var timeView = document.getElementById("timeView");
 var alarmView = document.getElementById("alarmView");
 var statsView = document.getElementById("statsView");
+var dayView = document.getElementById("dayView");
+var weekView = document.getElementById("weekView");
 var alarmTime = "";
 var alarmMinuteDropDown = document.getElementById("alarmMinuteDropDown");
 var alarmHourDropDown = document.getElementById("alarmHourDropDown");
@@ -11,6 +13,8 @@ function onTimeClicked()
     timeView.style.display = "inherit";
     alarmsView.style.display = "none";
     statsView.style.display = "none";
+    dayView.style.display = "none";
+    weekView.style.display = "none";
 
     var timeText = document.getElementById("timeText");
     var currDate = new Date();
@@ -34,13 +38,42 @@ function onAlarmsClicked()
     timeView.style.display = "none";
     alarmsView.style.display = "inherit";
     statsView.style.display = "none";
+    dayView.style.display = "none";
+    weekView.style.display = "none";
 };
+function onStatsClicked()
+{
+    timeView.style.display = "none";
+    alarmsView.style.display = "none";
+    statsView.style.display = "inherit";
+    dayView.style.display = "inherit";
+    weekView.style.display = "none";
+}
+function onDayClicked()
+{
+    timeView.style.display = "none";
+    alarmsView.style.display = "none";
+    statsView.style.display = "inherit";
+    dayView.style.display = "inherit";
+    weekView.style.display = "none";
+}
+function onWeekClicked()
+{
+    timeView.style.display = "none";
+    alarmsView.style.display = "none";
+    statsView.style.display = "inherit";
+    dayView.style.display = "none";
+    weekView.style.display = "inherit";
+}
+
 
 function onStatsClicked()
 {
     timeView.style.display = "none";
     alarmsView.style.display = "none";
     statsView.style.display = "inherit";
+    dayView.style.display = "none";
+    weekView.style.display = "none";
 };
 
 function setAlarm()

@@ -6,6 +6,8 @@ var weekView = document.getElementById("weekView");
 var alarmTime = "";
 var alarmMinuteDropDown = document.getElementById("alarmMinuteDropDown");
 var alarmHourDropDown = document.getElementById("alarmHourDropDown");
+var snoozeNumberDropDown = document.getElementById("snoozeNumberDropDown");
+var snoozeLengthDropDown = document.getElementById("snoozeLengthDropDown");
 var alarmStopped = false;
 
 function onTimeClicked()
@@ -28,7 +30,7 @@ function onTimeClicked()
     }
     else
     {
-        alarmStatus.innerHTML = "Alarm is set to " + alarmTime;
+        alarmStatus.innerHTML = "Alarm will ring at " + alarmTime;
     }
 
 };
@@ -108,6 +110,20 @@ function init()
         var op = document.createElement("option");
         op.text = ((i < 10) ? "0" : "") + i;
         alarmMinuteDropDown.add(op);
+    }
+
+    for (i = 0; i <= 10; i++)
+    {
+        var op = document.createElement("option");
+        op.text = i;
+        snoozeNumberDropDown.add(op);
+    }
+    
+    for (i = 0; i <= 30; i++)
+    {
+        var op = document.createElement("option");
+        op.text = ((i < 10) ? "0" : "") + i;
+        snoozeLengthDropDown.add(op);
     }
 
     onTimeClicked();

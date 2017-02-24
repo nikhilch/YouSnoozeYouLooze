@@ -3,6 +3,8 @@ var alarmView = document.getElementById("alarmView");
 var statsView = document.getElementById("statsView");
 var dayView = document.getElementById("dayView");
 var weekView = document.getElementById("weekView");
+var monthView = document.getElementById("monthView");
+var yearView = document.getElementById("yearView");
 var alarmTime = "";
 var wakeUpTime = document.getElementById("wakeUpTime");
 var alarmMinuteDropDown = document.getElementById("alarmMinuteDropDown");
@@ -20,6 +22,8 @@ function onTimeClicked()
     statsView.style.display = "none";
     dayView.style.display = "none";
     weekView.style.display = "none";
+	monthView.style.display = "none";
+	yearView.style.display = "none";
 
     var timeText = document.getElementById("timeText");
     var currDate = new Date();
@@ -46,6 +50,8 @@ function onAlarmsClicked()
     statsView.style.display = "none";
     dayView.style.display = "none";
     weekView.style.display = "none";
+	monthView.style.display = "none";
+	yearView.style.display = "none";
 };
 function onStatsClicked()
 {
@@ -54,6 +60,8 @@ function onStatsClicked()
     statsView.style.display = "inherit";
     dayView.style.display = "inherit";
     weekView.style.display = "none";
+	monthView.style.display = "none";
+	yearView.style.display = "none";
 }
 function onDayClicked()
 {
@@ -62,6 +70,8 @@ function onDayClicked()
     statsView.style.display = "inherit";
     dayView.style.display = "inherit";
     weekView.style.display = "none";
+	monthView.style.display = "none";
+	yearView.style.display = "none";
 }
 function onWeekClicked()
 {
@@ -70,16 +80,43 @@ function onWeekClicked()
     statsView.style.display = "inherit";
     dayView.style.display = "none";
     weekView.style.display = "inherit";
+	monthView.style.display = "none";
+	yearView.style.display = "none";
 }
 
+function onMonthClicked()
+{
+	timeView.style.display = "none";
+    alarmsView.style.display = "none";
+    statsView.style.display = "inherit";
+    dayView.style.display = "none";
+    weekView.style.display = "none";
+	monthView.style.display = "inherit";
+	yearView.style.display = "none";
+	
+}
+
+function onYearClicked()
+{
+	timeView.style.display = "none";
+    alarmsView.style.display = "none";
+    statsView.style.display = "inherit";
+    dayView.style.display = "none";
+    weekView.style.display = "none";
+	monthView.style.display = "none";
+	yearView.style.display = "inherit";
+}
 
 function onStatsClicked()
 {
     timeView.style.display = "none";
     alarmsView.style.display = "none";
     statsView.style.display = "inherit";
-    dayView.style.display = "none";
+    dayView.style.display = "inherit";
     weekView.style.display = "none";
+	monthView.style.display = "none";
+	yearView.style.display = "none";
+
 };
 
 function setAlarm()

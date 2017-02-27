@@ -20,15 +20,18 @@
 <!-- View for "Alarms" page -->
 <div id="alarmsView" class="ysylView">
     <!-- Hours and minutes drop downs are populated in script.js -->
+<div class="block_1">
     <select id="alarmHourDropDown" onchange="updateWakeUpTime()" class="alarmTimeSettings"></select>
     <select id="alarmMinuteDropDown" onchange="updateWakeUpTime()" class="alarmTimeSettings"></select>
     <select id="alarmAMPMDropDown" class="alarmTimeSettings">
         <option value="AM">AM</option>
         <option value="PM">PM</option>
     </select>
-    Snooze
-    <select id="snoozeNumberDropDown" onchange="updateWakeUpTime()" class="alarmTimeSettings"></select> times for 
+	</div> <div class="h_line"></div>
+    &nbsp &nbsp Snooze
+    <select id="snoozeNumberDropDown" onchange="updateWakeUpTime()" class="alarmTimeSettings"></select> times &nbsp | &nbsp 
     <select id="snoozeLengthDropDown" onchange="updateWakeUpTime()" class="alarmTimeSettings"></select> minutes each!
+  
     <div id="wakeUpTime"></div>
     <button id="setAlarm" type="button" onclick="setAlarm()">Set Alarm</button>
 </div>

@@ -139,6 +139,8 @@ function clearAlarm()
 function ringAlarm()
 {
     alarmStopped = confirm("Press \"OK\" to shut off alarm, or \"Cancel\" to snooze.");
+    if (alarmStopped)
+        clearAlarm();
 };
 
 function updateWakeUpTime()

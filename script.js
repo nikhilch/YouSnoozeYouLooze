@@ -163,13 +163,19 @@ function updateWakeUpTime()
         wakeHour += 1;
     }
 
-    while (wakeHour > 12)
+    while (wakeHour >= 12)
     {
         wakeHour -= 12;
         if (ampm == "AM")
             ampm = "PM";
         else
             ampm = "AM";
+
+        if (wakeHour == 0)
+        {
+            wakeHour = 12;
+            break;
+        }
     }
 
 

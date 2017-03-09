@@ -13,6 +13,7 @@ var alarmAMPMDropDown = document.getElementById("alarmAMPMDropDown");
 var snoozeNumberDropDown = document.getElementById("snoozeNumberDropDown");
 var snoozeLengthDropDown = document.getElementById("snoozeLengthDropDown");
 var clearAlarmButton = document.getElementById("clearAlarm");
+var statsText = document.getElementById("statsText");
 var alarmStopped = false;
 
 function onTimeClicked()
@@ -55,13 +56,7 @@ function onAlarmsClicked()
 };
 function onStatsClicked()
 {
-    timeView.style.display = "none";
-    alarmsView.style.display = "none";
-    statsView.style.display = "inherit";
-    dayView.style.display = "inherit";
-    weekView.style.display = "none";
-	monthView.style.display = "none";
-	yearView.style.display = "none";
+    onDayClicked();
 }
 function onDayClicked()
 {
@@ -72,6 +67,8 @@ function onDayClicked()
     weekView.style.display = "none";
 	monthView.style.display = "none";
 	yearView.style.display = "none";
+
+    statsText.innerHTML = "You snoozed for 20 minutes today!";
 }
 function onWeekClicked()
 {
@@ -82,6 +79,8 @@ function onWeekClicked()
     weekView.style.display = "inherit";
 	monthView.style.display = "none";
 	yearView.style.display = "none";
+
+    statsText.innerHTML = "You snoozed for 2 hours and 15 minutes this week!";
 }
 
 function onMonthClicked()
@@ -94,6 +93,7 @@ function onMonthClicked()
 	monthView.style.display = "inherit";
 	yearView.style.display = "none";
 	
+    statsText.innerHTML = "You snoozed for 7 hours and 18 minutes this month!";
 }
 
 function onYearClicked()
@@ -105,19 +105,9 @@ function onYearClicked()
     weekView.style.display = "none";
 	monthView.style.display = "none";
 	yearView.style.display = "inherit";
+
+    statsText.innerHTML = "You snoozed for 87 hours this year!";
 }
-
-function onStatsClicked()
-{
-    timeView.style.display = "none";
-    alarmsView.style.display = "none";
-    statsView.style.display = "inherit";
-    dayView.style.display = "inherit";
-    weekView.style.display = "none";
-	monthView.style.display = "none";
-	yearView.style.display = "none";
-
-};
 
 function setAlarm()
 {
